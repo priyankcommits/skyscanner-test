@@ -1,0 +1,70 @@
+@import '~bpk-mixins';
+
+.FlightItem {
+  &__container {
+    @include bpk-grid__container;
+    @include bpk-grid__container--full-width;
+  }
+  &__row {
+    @include bpk-grid__row;
+  }
+  &__column {
+    @include bpk-grid__column;
+    &__1 {
+      @include bpk-grid__column--mobile-(1);
+      float: left;
+    }
+    &__2 {
+      @include bpk-grid__column--mobile-(2);
+      float: left;
+    }
+    &__4 {
+      @include bpk-grid__column--mobile-(4);
+      float: left;
+    }
+    &__8 {
+      @include bpk-grid__column--mobile-(8);
+      float: left;
+    }
+    &__12 {
+      @include bpk-grid__column--mobile-(12);
+      float: left;
+    }
+  }
+
+  &__icon {
+    color: $bpk-color-sky-gray-tint-02;
+    margin-top: $bpk-spacing-sm;
+    margin-left: $bpk-spacing-sm;
+  }
+  &__card {
+    @include bpk-card;
+    @include bpk-card--padded;
+    margin-top: $bpk-spacing-xs;
+  }
+  &__image {
+    height: 30px;
+    width: 30px;
+  }
+  &__bottom {
+    margin-top: $bpk-spacing-md;
+  }
+  &__price {
+    @include bpk-text-lg;
+  }
+  &__grey__2 {
+    color: $bpk-color-sky-gray-tint-02;
+  }
+  &__grey__4 {
+    color: $bpk-color-sky-gray-tint-04;
+  }
+  &__button {
+    @include bpk-button;
+  }
+  &__direct {
+    color: $bpk-color-system-green;
+  }
+  &__stop {
+    color: $bpk-color-system-red;
+  }
+}
